@@ -1,0 +1,12 @@
+/*
+  The following directives require Tailwind CSS and PostCSS processing.
+  Make sure your build tool (like Create React App with Tailwind configured, Vite, or Webpack) is set up to process Tailwind.
+*/
+/* @import "tailwindcss"; */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body{
+  background-color: rgb(219, 219, 219);
+}

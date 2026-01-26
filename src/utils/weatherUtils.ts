@@ -57,3 +57,4 @@ export function getTempUnitSymbol(unit: "metric" | "imperial"): string {
   return unit === "metric" ? "°C" : "°F";
 }
 
+

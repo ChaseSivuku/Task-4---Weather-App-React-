@@ -139,3 +139,4 @@ export async function fetchWeatherByCoords(
   return { weather: weatherData, forecast: forecastData };
 }
 
+

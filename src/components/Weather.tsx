@@ -51,8 +51,8 @@ export default function Weather() {
       }}
     >
       <div className="absolute inset-0 backdrop-blur-sm bg-black/20"></div>
-      <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row gap-6">
-        <div className="flex-1 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-6 text-center text-white">
+      <div className="relative z-10 w-full max-w-6xl flex flex-col md:flex-row gap-4 sm:gap-6">
+        <div className="flex-1 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-4 sm:p-6 text-center text-white">
           <div className="flex justify-end mb-4">
             <TemperatureToggle unit={tempUnit} onToggle={toggleTempUnit} />
           </div>

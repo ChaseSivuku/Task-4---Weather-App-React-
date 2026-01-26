@@ -16,12 +16,12 @@ export default function ForecastDisplay({ forecastData, tempUnit }: ForecastDisp
   const dailyForecast = forecastData.list.filter((_, i) => i % 8 === 0);
 
   return (
-    <div className="w-full md:w-1/3 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-6 text-white">
+    <div className="w-full md:w-1/3 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-4 sm:p-6 text-white">
       <h3 className="text-xl font-bold mb-4">Forecast</h3>
-      <div className="grid grid-cols-2 gap-4 overflow-y-auto max-h-96 pr-2">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 overflow-y-auto max-h-96 pr-2">
         {dailyForecast.map((item, idx) => (
-          <div key={idx} className="bg-white/20 p-4 rounded-lg text-center">
-            <p className="text-sm mb-2">
+          <div key={idx} className="bg-white/20 p-3 sm:p-4 rounded-lg text-center flex flex-col items-center justify-center">
+            <p className="text-xs sm:text-sm mb-2">
               {new Date(item.dt_txt).toLocaleDateString(undefined, {
                 weekday: "short",
               })}
@@ -29,13 +29,14 @@ export default function ForecastDisplay({ forecastData, tempUnit }: ForecastDisp
             <img
               src={getWeatherImage(item.weather[0].main)}
               alt={item.weather[0].main}
-              className="w-12 h-12 mx-auto mb-1"
+              className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-1 object-contain flex-shrink-0"
             />
-            <p className="text-sm">{formatTemperature(item.main.temp, tempUnit)}</p>
+            <p className="text-xs sm:text-sm">{formatTemperature(item.main.temp, tempUnit)}</p>
           </div>
         ))}
       </div>
     </div>
   );
 }
+
 
